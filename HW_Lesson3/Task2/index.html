@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="task2.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <section>
+        <h2 class="header">Header</h2>
+
+        <p id="data">DOM - document object model</p>
+
+        <span>Span</span>
+
+        <div>Invisible element</div>
+      </section>
+
+      <button id="btn" onclick="addStyle()">Add style</button>
+      <script>
+        function addStyle() {
+          const h1Tag = document.getElementsByClassName("header")[0];
+          const pTag = document.getElementById("data");
+          const spanTag = document.querySelector("span");
+          const divTag = document.querySelector("div");
+
+          h1Tag.style.cssText = "color: red; text-decoration: underline;";
+          pTag.style.cssText =
+            "color: brown; font-size: 18px; font-family: 'Comic Sans MS';";
+          spanTag.style.cssText = "color: green;";
+          divTag.style.cssText = "visibility: hidden;";
+        }
+      </script>
+    </body>
+  </body>
+</html>

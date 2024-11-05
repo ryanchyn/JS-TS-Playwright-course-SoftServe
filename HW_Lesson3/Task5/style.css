@@ -1,0 +1,24 @@
+#main {
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+#btn {
+  width: 100px;
+}
+
+textarea {
+  resize: none;
+}
+
+#divTime {
+  float: right;
+}
