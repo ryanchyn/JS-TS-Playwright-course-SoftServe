@@ -1,7 +1,6 @@
 import { test, expect } from "@playwright/test";
 
 test("task1", async ({ page }) => {
-  test.setTimeout(10000);
   await page.goto("https://example.com");
 
   const title = await page.title();
