@@ -1,6 +1,5 @@
 function withEmploymentDate(target: any, context: any): any {
   if (context.kind === "class") {
-    target.prototype.employmentDate = new Date("2024-04-12T00:00:00.000Z");
   }
   return class extends target {
     employmentDate = new Date("2024-04-12T00:00:00.000Z");

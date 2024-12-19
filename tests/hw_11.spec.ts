@@ -45,4 +45,6 @@ test("task4", async ({ page }) => {
   await page.goto("https://playwright.dev/");
   const title = page.locator(".hero__title");
   await expect(title).toContainText("Playwright");
+  await page.getByText("Get Started").click();
+  await expect(page).toHaveURL(/.*\/docs\//);
 });
