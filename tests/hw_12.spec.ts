@@ -101,19 +101,14 @@ test("task4", async ({ page }) => {
 });
 
 test("task5", async ({ page }) => {
-  //TBD
   await page.goto(
     "https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=24"
   ); //Phone and PDAs
   const title = page.locator("h1");
   await expect(title).toContainText("Phones & PDAs");
 
-  const minPriceInput = page
-    .locator("#mz-filter-panel-1-0")
-    .getByPlaceholder("Minimum Price");
-  const maxPriceInput = page
-    .locator("#mz-filter-panel-1-0")
-    .getByPlaceholder("Maximum Price");
+  const minPriceInput = page.getByPlaceholder("Minimum Price").last();
+  const maxPriceInput = page.getByPlaceholder("Maximum Price").last();
 
   await minPriceInput.fill("135");
   await maxPriceInput.fill("165");
@@ -121,7 +116,5 @@ test("task5", async ({ page }) => {
   const productItems = page.locator(".product-layout");
   const count = await productItems.count();
 
-  expect(count).toBe(8);
-
-  //in progress
+  expect(count).toBe("8");
 });
